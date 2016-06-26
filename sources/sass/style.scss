@@ -142,6 +142,62 @@ html {
 /*
 *   Themes
 */
+// general elements
+.blueBtn{
+    background: $lightBlueColor;
+    border: none;
+    color: $lightColor;
+}
+
+.actionButton.whiteButton {
+    background-color: #fff;
+    border: 2px solid $lightBlueColor;
+    color: $lightBlueColor;
+}
+
+.hr {
+    position: relative;
+    margin-top: 2.95rem;
+    margin-bottom: 2.22rem;
+    border-bottom: 1px solid $lightGrey;
+    .ico {
+        position: absolute;
+        top: - 2.95rem;
+        left: calc(50% - 2.95rem);
+        display: inline-block;
+        width: 5.9rem;
+        height: 5.9rem;
+        // border: 1.8rem solid #fff;
+        border-radius: 50%;
+        background-color: #fff;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+// text
+b {
+    font-weight: bold;
+}
+h6.title {
+    font-size: 1.5rem;
+    color: $darkText;
+}
+p.text {
+    line-height: 148%;
+}
+.sectionTitle {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 2.96rem;
+    margin-bottom: 3.7rem;
+}
+
+// local elements
+main {
+    color: $darkColor;
+}
+
 .mainHeader {
     color: $lightColor;
 }
@@ -149,23 +205,6 @@ html {
     color: $lightColor;
     font-size: 1.075rem;
     text-decoration: none;
-}
-
-.actionButton.blueBtn{
-    background: $lightBlueColor;
-    border: none;
-    color: $lightColor;
-}
-h6.title {
-    font-size: 1.5rem;
-    color: $darkText;
-}
-p.text {
-    line-height: 140%;
-}
-
-main {
-    color: $darkColor;
 }
 
 .stikers li {
@@ -212,5 +251,41 @@ main {
     }
 }
 
+.checkedIco {
+    background: url('../images/checked.png');
+}
 
+section.features {
+    padding-top: 3.333rem;
+}
 
+.featureCard {
+    margin-top: 3.7rem;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    
+    .featureImage {
+        float: left;
+    }
+    .featureDescription {
+        width: 65.43%;
+        float: right;
+        .title {
+            margin : 1.11rem 0;
+        }
+        button {
+            margin-top: 1.5rem;
+        }
+    }
+}
+.featureCard.right {
+    .featureImage {
+        float: right;
+    }
+    .featureDescription {
+        float: left;
+    }
+}
