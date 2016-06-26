@@ -6,8 +6,11 @@ $contentWidth: 1024px;
 $lightColor: #fff;
 $lightGrey: #e1e1e1;
 $darkColor: #575757;
+$greyText : #c3c3c3;
 $darkText: #484848;
 $lightBlueColor: #71b6d5;
+$darkBlueColor: #273a43;
+$darkestBlueColor: #172227;
 
 $topBannerHeight: 95px;
 
@@ -155,12 +158,14 @@ main > section {
     background: $lightBlueColor;
     border: none;
     color: $lightColor;
+    cursor: pointer;
 }
 
 .actionButton.whiteButton {
     background-color: #fff;
     border: 2px solid $lightBlueColor;
     color: $lightBlueColor;
+    cursor: pointer;
 }
 
 .hr {
@@ -401,4 +406,85 @@ main {
     } 
 }
 
+.topFooter {
+    min-height: 350px;
+    background: $darkBlueColor;
+    padding: 4.44rem 0;
+    &:after {
+        clear: both;
+    }
+    .footerItem {
+        float: left;
+        width: 210px;
+        margin-right: 4.44rem;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .caption {
+            margin-bottom: 2.22rem;
+            text-transform: uppercase;
+            font-size: 1.48rem;
+            line-height: 200%;
+            color: $lightColor;
+        }
+        p.text {
+            color: $greyText;
+            margin-bottom: 0.9rem;
+        }
+        .address, .mail, .phone, .tweet{
+            padding-left: 2.96rem;
+            line-height: 250%;
+            color: $lightColor;
+            background-position: left center;
+            background-repeat: no-repeat;
+        }
+        .address {
+            background-image: url('../images/address.png');
+        }
+        .mail {
+            background-image: url('../images/mail.png');
+        }
+        .phone {
+            background-image: url('../images/phone.png');
+        }
+        .tweet {
+            background-image: url('../images/tweet.png');
+            background-position: left 10%;
+            margin-bottom: 2.22rem;
+            .text {
+                margin-bottom: 0;
+            }
+        }
+        .text.time {
+            color: $lightBlueColor;
+        }
+        .subscribeNewsFrm{
+            display: block;
+            input, button {
+                height: 3rem;
+                margin: 0;
+                float: left;
+                border: none;
+                outline: none;
+            }
+            input {
+                width: 80%;
+                color: $lightColor;
+                background: $darkestBlueColor;
+                padding: 0 1rem;
+                border-radius: 5px 0 0 5px;
+            }
+            button {
+                width: 20%;
+                margin: 0;
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+}
+.bottomFooter {
+    height: 90px;
+    background: $darkestBlueColor;
+}
 

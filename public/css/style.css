@@ -196,12 +196,14 @@ main > section:last-child {
   background: #71b6d5;
   border: none;
   color: #fff;
+  cursor: pointer;
 }
 
 .actionButton.whiteButton {
   background-color: #fff;
   border: 2px solid #71b6d5;
   color: #71b6d5;
+  cursor: pointer;
 }
 
 .hr {
@@ -470,4 +472,102 @@ main {
 
 .testimonialsList .testiPages li.active {
   background-color: #71b6d5;
+}
+
+.topFooter {
+  min-height: 350px;
+  background: #273a43;
+  padding: 4.44rem 0;
+}
+
+.topFooter:after {
+  clear: both;
+}
+
+.topFooter .footerItem {
+  float: left;
+  width: 210px;
+  margin-right: 4.44rem;
+}
+
+.topFooter .footerItem:last-child {
+  margin-right: 0;
+}
+
+.topFooter .footerItem .caption {
+  margin-bottom: 2.22rem;
+  text-transform: uppercase;
+  font-size: 1.48rem;
+  line-height: 200%;
+  color: #fff;
+}
+
+.topFooter .footerItem p.text {
+  color: #c3c3c3;
+  margin-bottom: 0.9rem;
+}
+
+.topFooter .footerItem .address, .topFooter .footerItem .mail, .topFooter .footerItem .phone, .topFooter .footerItem .tweet {
+  padding-left: 2.96rem;
+  line-height: 250%;
+  color: #fff;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.topFooter .footerItem .address {
+  background-image: url("../images/address.png");
+}
+
+.topFooter .footerItem .mail {
+  background-image: url("../images/mail.png");
+}
+
+.topFooter .footerItem .phone {
+  background-image: url("../images/phone.png");
+}
+
+.topFooter .footerItem .tweet {
+  background-image: url("../images/tweet.png");
+  background-position: left 10%;
+  margin-bottom: 2.22rem;
+}
+
+.topFooter .footerItem .tweet .text {
+  margin-bottom: 0;
+}
+
+.topFooter .footerItem .text.time {
+  color: #71b6d5;
+}
+
+.topFooter .footerItem .subscribeNewsFrm {
+  display: block;
+}
+
+.topFooter .footerItem .subscribeNewsFrm input, .topFooter .footerItem .subscribeNewsFrm button {
+  height: 3rem;
+  margin: 0;
+  float: left;
+  border: none;
+  outline: none;
+}
+
+.topFooter .footerItem .subscribeNewsFrm input {
+  width: 80%;
+  color: #fff;
+  background: #172227;
+  padding: 0 1rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.topFooter .footerItem .subscribeNewsFrm button {
+  width: 20%;
+  margin: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.bottomFooter {
+  height: 90px;
+  background: #172227;
 }
