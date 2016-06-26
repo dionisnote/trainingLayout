@@ -29,6 +29,7 @@ html {
 .headerTopBar {
     position: absolute;
     width: 100%;
+    z-index: 5;
 
     .contentBlock {
         height: $topBannerHeight;
@@ -58,6 +59,8 @@ html {
     text-transform: uppercase;
     height: 3em;
     padding: 0 1em;
+    cursor: pointer;
+    outline: none;
 }
 
 .headerBanners {
@@ -82,7 +85,7 @@ html {
         width: 100%;
         text-align: center;
         .bannerTitle {
-            margin-top: 150px;
+            margin-top: 130px;
             font-size: 3.5rem;
         }
         .bannerSubText{
@@ -92,7 +95,7 @@ html {
 
     .actionButton {
         display: inline-block;
-        margin-top: 100px;
+        margin-top: 90px;
         font-size: 1.25rem;
     }
     .bannersPagination {
@@ -101,11 +104,24 @@ html {
         width: 100%;
         text-align: center;
         li {
+            position: relative;
             display: inline-block;
             width: 7px;
             height: 7px;
+            margin: 15px;
             background: $lightColor;
             border-radius: 50%; 
+            &.active:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 25px;
+                height: 25px;
+                top: -11px;
+                left: -11px;
+                border: 2px solid $lightColor;
+                border-radius: 50%;
+            }
         }
     }
 
