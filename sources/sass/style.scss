@@ -4,7 +4,11 @@
 // variables
 $contentWidth: 1024px;
 $lightColor: #fff;
+$lightGrey: #e1e1e1;
+$darkColor: #575757;
+$darkText: #484848;
 $lightBlueColor: #71b6d5;
+
 $topBannerHeight: 95px;
 
 * {
@@ -127,7 +131,12 @@ html {
 
 }
 
-
+.intro {
+    padding: 85px 30px;
+    text-align: center;
+    font-size: 1.33rem;
+    line-height: 150%;
+}
 
 
 /*
@@ -141,8 +150,67 @@ html {
     font-size: 1.075rem;
     text-decoration: none;
 }
+
 .actionButton.blueBtn{
     background: $lightBlueColor;
     border: none;
     color: $lightColor;
 }
+h6.title {
+    font-size: 1.5rem;
+    color: $darkText;
+}
+p.text {
+    line-height: 140%;
+}
+
+main {
+    color: $darkColor;
+}
+
+.stikers li {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    border: 1px solid $lightGrey;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 2rem;
+    img{
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+    .stikerText {
+        padding: 1.85rem 4.44rem;
+        .title {
+            margin-bottom: 15px;
+        }
+    }
+    .stikerIcon {
+        position: absolute;
+        top: -3.5rem;
+        left: calc( 50% - 3.5rem);
+        width: 7rem;
+        height: 7rem;
+        background: $lightBlueColor;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 0.75rem solid #fff;
+        border-radius: 50%;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+    .cameraIcon{
+        background-image: url('../images/camera.png');
+    }
+    .noteIcon{
+        background-image: url('../images/note.png');
+    }
+    .cartIcon{
+        background-image: url('../images/cart.png');
+    }
+}
+
+
+

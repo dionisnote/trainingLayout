@@ -173,6 +173,13 @@ html {
   border-radius: 50%;
 }
 
+.intro {
+  padding: 85px 30px;
+  text-align: center;
+  font-size: 1.33rem;
+  line-height: 150%;
+}
+
 /*
 *   Themes
 */
@@ -190,4 +197,69 @@ html {
   background: #71b6d5;
   border: none;
   color: #fff;
+}
+
+h6.title {
+  font-size: 1.5rem;
+  color: #484848;
+}
+
+p.text {
+  line-height: 140%;
+}
+
+main {
+  color: #575757;
+}
+
+.stikers li {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.stikers li img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.stikers li .stikerText {
+  padding: 1.85rem 4.44rem;
+}
+
+.stikers li .stikerText .title {
+  margin-bottom: 15px;
+}
+
+.stikers li .stikerIcon {
+  position: absolute;
+  top: -3.5rem;
+  left: calc( 50% - 3.5rem);
+  width: 7rem;
+  height: 7rem;
+  background: #71b6d5;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0.75rem solid #fff;
+  border-radius: 50%;
+}
+
+.stikers li:last-child {
+  margin-right: 0;
+}
+
+.stikers li .cameraIcon {
+  background-image: url("../images/camera.png");
+}
+
+.stikers li .noteIcon {
+  background-image: url("../images/note.png");
+}
+
+.stikers li .cartIcon {
+  background-image: url("../images/cart.png");
 }
