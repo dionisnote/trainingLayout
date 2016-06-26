@@ -60,8 +60,9 @@ html {
     padding: 0 1em;
 }
 
-.headerBanners { 
-    ul, li, .bannerContent {
+.headerBanners {
+    position: relative; 
+    .bannerList, .bannerList li, .bannerContent {
         width: 100%;
     }    
     ul {       
@@ -93,9 +94,25 @@ html {
         display: inline-block;
         margin-top: 100px;
         font-size: 1.25rem;
-
     }
+    .bannersPagination {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+        li {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: $lightColor;
+            border-radius: 50%; 
+        }
+    }
+
 }
+
+
+
 
 /*
 *   Themes

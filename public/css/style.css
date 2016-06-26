@@ -96,7 +96,11 @@ html {
   padding: 0 1em;
 }
 
-.headerBanners ul, .headerBanners li, .headerBanners .bannerContent {
+.headerBanners {
+  position: relative;
+}
+
+.headerBanners .bannerList, .headerBanners .bannerList li, .headerBanners .bannerContent {
   width: 100%;
 }
 
@@ -135,6 +139,21 @@ html {
   display: inline-block;
   margin-top: 100px;
   font-size: 1.25rem;
+}
+
+.headerBanners .bannersPagination {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.headerBanners .bannersPagination li {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
 }
 
 /*
