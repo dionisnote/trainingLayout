@@ -60,6 +60,10 @@ html {
   margin: 0 auto;
 }
 
+main > section {
+  padding-top: 3.333rem;
+}
+
 .headerTopBar {
   position: absolute;
   width: 100%;
@@ -236,6 +240,15 @@ p.text {
   margin-bottom: 3.7rem;
 }
 
+.sectionTitle.withSubTitle {
+  margin-bottom: 1rem;
+}
+
+.sectionSubTitle {
+  text-align: center;
+  margin-bottom: 3.7rem;
+}
+
 main {
   color: #575757;
 }
@@ -306,8 +319,8 @@ main {
   background: url("../images/checked.png");
 }
 
-section.features {
-  padding-top: 3.333rem;
+.cupIco {
+  background-image: url("../images/cup.png");
 }
 
 .featureCard {
@@ -343,4 +356,62 @@ section.features {
 
 .featureCard.right .featureDescription {
   float: left;
+}
+
+.projectsList {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projectsList li {
+  float: left;
+  margin-right: 1.48rem;
+}
+
+.projectsList li:last-child {
+  margin-right: 0;
+}
+
+.projectsList li .image {
+  width: 17.78rem;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.projectsList li .image img {
+  height: 100%;
+  float: left;
+}
+
+.projectsList li .image::after {
+  cursor: pointer;
+  content: '';
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+}
+
+.projectsList li .image:hover::after {
+  opacity: 1;
+}
+
+.projectsList li .projectName {
+  font-size: 1.333rem;
+  text-align: center;
+  margin-top: 1.48rem;
+}
+
+.projectsList li .projectProp {
+  text-align: center;
+  line-height: 150%;
 }
