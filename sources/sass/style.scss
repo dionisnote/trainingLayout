@@ -484,7 +484,51 @@ main {
     }
 }
 .bottomFooter {
-    height: 90px;
     background: $darkestBlueColor;
+    color: $lightColor;
+    .contentBlock {
+        height: 90px;
+    }
+    .copy, .social {
+        line-height: 90px;
+    }
+    .copy {
+        display: inline-block;
+        color: $greyText;
+    }
+    .social {
+        float: right;
+        li {
+            float: left;
+            margin-left: 0.9rem;
+            a {
+                position: relative;
+                top: 0.5rem;
+                display: inline-block;
+                width: 2.22rem;
+                height: 2.22rem;
+                background: #fff;
+                border-radius: 50%;
+                &.fb, &.linked, &.twitter {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                &.twitter {
+                    background-color: #71b6d5;
+                    background-image: url('../images/tweetterwhite.png');
+                }
+
+                &.fb, &.linked {
+                    background-color: #2c3b42;
+                }
+                &.fb {
+                    background-image: url('../images/fbwhite.png');
+                }
+                &.linked {
+                    background-image: url('../images/inwhite.png');
+                }
+            }
+        }
+    }
 }
 
