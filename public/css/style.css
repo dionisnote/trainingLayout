@@ -1,0 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13.5px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/*
+*   Layouts
+*/
+.contentBlock {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.headerTopBar {
+  position: absolute;
+  width: 100%;
+}
+
+.headerTopBar .contentBlock {
+  height: 95px;
+  line-height: 95px;
+  border-bottom: 1px solid #7c7c7c;
+}
+
+.headerTopBar .logo {
+  float: left;
+}
+
+.headerTopBar .logo img {
+  vertical-align: middle;
+}
+
+.headerTopBar nav {
+  float: right;
+}
+
+.headerTopBar nav li {
+  display: inline-block;
+  margin-left: 35px;
+  margin-right: 5px;
+}
+
+.actionButton {
+  border-radius: 5px;
+  text-transform: uppercase;
+  height: 3em;
+  padding: 0 1em;
+}
+
+.headerBanners ul, .headerBanners li, .headerBanners .bannerContent {
+  width: 100%;
+}
+
+.headerBanners ul {
+  overflow: hidden;
+}
+
+.headerBanners li img {
+  min-width: 100%;
+}
+
+.headerBanners .bannerContent {
+  position: absolute;
+  top: 95px;
+}
+
+.headerBanners .contentBlock {
+  position: relative;
+}
+
+.headerBanners .text {
+  width: 100%;
+  text-align: center;
+}
+
+.headerBanners .text .bannerTitle {
+  margin-top: 150px;
+  font-size: 3.5rem;
+}
+
+.headerBanners .text .bannerSubText {
+  font-size: 1.85rem;
+}
+
+.headerBanners .actionButton {
+  display: inline-block;
+  margin-top: 100px;
+  font-size: 1.25rem;
+}
+
+/*
+*   Themes
+*/
+.mainHeader {
+  color: #fff;
+}
+
+.headerTopBar nav a {
+  color: #fff;
+  font-size: 1.075rem;
+  text-decoration: none;
+}
+
+.actionButton.blueBtn {
+  background: #71b6d5;
+  border: none;
+  color: #fff;
+}

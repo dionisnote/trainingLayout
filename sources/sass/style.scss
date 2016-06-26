@@ -1,0 +1,115 @@
+// vendors
+@import 'vendors/reset';
+
+// variables
+$contentWidth: 1024px;
+$lightColor: #fff;
+$lightBlueColor: #71b6d5;
+$topBannerHeight: 95px;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13.5px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
+}
+
+/*
+*   Layouts
+*/
+
+.contentBlock {
+    width: $contentWidth;
+    margin: 0 auto;
+}
+
+// header
+.headerTopBar {
+    position: absolute;
+    width: 100%;
+
+    .contentBlock {
+        height: $topBannerHeight;
+        line-height: $topBannerHeight;
+        border-bottom: 1px solid #7c7c7c;
+    }
+}
+
+.headerTopBar .logo {
+    float: left;
+    img{
+        vertical-align: middle;
+    }
+}
+
+.headerTopBar nav {
+    float: right;
+    li {
+        display: inline-block;
+        margin-left: 35px;
+        margin-right: 5px;
+    }
+}
+
+.actionButton {
+    border-radius: 5px;
+    text-transform: uppercase;
+    height: 3em;
+    padding: 0 1em;
+}
+
+.headerBanners { 
+    ul, li, .bannerContent {
+        width: 100%;
+    }    
+    ul {       
+        overflow: hidden;
+    }
+    li img {
+        min-width: 100%;
+    }
+    .bannerContent {
+        position: absolute;
+        top: $topBannerHeight;
+    }
+    .contentBlock {
+        position: relative;
+    }
+    .text {
+        width: 100%;
+        text-align: center;
+        .bannerTitle {
+            margin-top: 150px;
+            font-size: 3.5rem;
+        }
+        .bannerSubText{
+            font-size: 1.85rem;
+        }
+    }
+
+    .actionButton {
+        display: inline-block;
+        margin-top: 100px;
+        font-size: 1.25rem;
+
+    }
+}
+
+/*
+*   Themes
+*/
+.mainHeader {
+    color: $lightColor;
+}
+.headerTopBar nav a {
+    color: $lightColor;
+    font-size: 1.075rem;
+    text-decoration: none;
+}
+.actionButton.blueBtn{
+    background: $lightBlueColor;
+    border: none;
+    color: $lightColor;
+}
