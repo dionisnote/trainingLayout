@@ -64,6 +64,10 @@ main > section {
   padding-top: 3.333rem;
 }
 
+main > section:last-child {
+  padding-bottom: 3.333rem;
+}
+
 .headerTopBar {
   position: absolute;
   width: 100%;
@@ -163,6 +167,7 @@ main > section {
   margin: 15px;
   background: #fff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .headerBanners .bannersPagination li.active:after {
@@ -217,6 +222,11 @@ main > section {
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.itemsList {
+  overflow: hidden;
+  width: 100%;
 }
 
 b {
@@ -323,6 +333,10 @@ main {
   background-image: url("../images/cup.png");
 }
 
+.bubbleIco {
+  background-image: url("../images/bubble.png");
+}
+
 .featureCard {
   margin-top: 3.7rem;
 }
@@ -413,5 +427,47 @@ main {
 
 .projectsList li .projectProp {
   text-align: center;
-  line-height: 150%;
+  line-height: 200%;
+}
+
+.testimonialsList {
+  font-size: 1.333rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.testimonialsList li {
+  width: 100%;
+}
+
+.testimonialsList .text {
+  margin-bottom: 2.22rem;
+}
+
+.testimonialsList .autor {
+  display: inline-block;
+  padding: 2.22rem 0;
+  margin: 0 auto;
+  background: url("../images/commentline.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.testimonialsList .testiPages {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.testimonialsList .testiPages li {
+  float: left;
+  margin-right: 0.9rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #e1e1e1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonialsList .testiPages li.active {
+  background-color: #71b6d5;
 }

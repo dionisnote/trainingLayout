@@ -31,6 +31,9 @@ html {
 
 main > section {
     padding-top: 3.333rem;
+    &:last-child {
+        padding-bottom: 3.333rem;
+    }
 }
 
 // header
@@ -118,7 +121,8 @@ main > section {
             height: 7px;
             margin: 15px;
             background: $lightColor;
-            border-radius: 50%; 
+            border-radius: 50%;
+            cursor: pointer; 
             &.active:after {
                 content: '';
                 position: absolute;
@@ -177,6 +181,11 @@ main > section {
         background-position: center;
         background-repeat: no-repeat;
     }
+}
+
+.itemsList {
+    overflow: hidden;
+    width: 100%;
 }
 // text
 b {
@@ -268,6 +277,9 @@ main {
 .cupIco {
     background-image: url('../images/cup.png');
 }
+.bubbleIco {
+    background-image: url('../images/bubble.png');
+}
 
 .featureCard {
     margin-top: 3.7rem;
@@ -303,7 +315,6 @@ main {
 .projectsList {
     width: 100%;
     overflow: hidden;
-
     li {
         float: left;
         margin-right: 1.48rem;
@@ -349,7 +360,45 @@ main {
         }
         .projectProp {
             text-align: center;
-            line-height: 150%;
+            line-height: 200%;
         }
     }
 }
+
+.testimonialsList {
+    font-size: 1.333rem;
+    padding: 0 1rem;
+    text-align: center;
+    li {
+        width: 100%;
+    }
+    .text {
+        margin-bottom: 2.22rem;
+    }
+    .autor {
+        display: inline-block;
+        padding: 2.22rem 0;
+        margin: 0 auto;
+        background: url('../images/commentline.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    .testiPages {
+        display: inline-block;
+        overflow: hidden;
+        li {
+            float: left;
+            margin-right: 0.9rem;
+            width: 0.9rem;
+            height: 0.9rem;
+            background: $lightGrey;
+            border-radius: 50%;
+            cursor: pointer;
+            &.active {
+                background-color: $lightBlueColor;
+            } 
+        }
+    } 
+}
+
+
