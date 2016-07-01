@@ -5,168 +5,164 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <header class="mainHeader">
-            <section class="headerTopBar">
-                <div class="contentBlock"><a href="#" class="logo"><img src="images/webworld.png"></a>
-                    <nav>
+        <header class="main-header">
+            <section class="main-header__top-bar top-bar">
+                <div class="content-block top-bar__content"><a href="#" class="top-bar__logo"><img src="images/webworld.png" class="top-bar__logo-image"></a>
+                    <nav class="menu top-bar__menu">
                         <ul>
-                            <li> <a href="#">Home</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="menu__item"> <a href="#">Home</a></li>
+                            <li class="menu__item"><a href="#">Portfolio</a></li>
+                            <li class="menu__item"><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </section>
-            <section class="headerBanners">
-                <ul class="bannerList">
-                    <li><img src="images/banner1.jpg" class="bannerImage">
-                        <div class="bannerContent">
-                            <div class="contentBlock">
-                                <div class="text">
-                                    <div class="bannerTitle">Clean, flat &amp; polished design</div>
-                                    <div class="bannerSubText">Proin facilisis aliquam nunc quis varius.</div>
-                                    <button class="actionButton blueBtn">Show more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="bannersPagination">
-                    <li></li>
-                    <li class="active"></li>
-                    <li></li>
-                </ul>
+            <section class="main-header__banners banner_list">
+                <div class="banner_list__content content-block">
+                    <ul class="banner-list__list">
+                        <li class="banner-list__element">
+                            <div class="banner-list__text-title">Clean, flat &amp; polished design</div>
+                            <div class="banner-list__text-subtext">Proin facilisis aliquam nunc quis varius.</div>
+                            <button class="banner-list__text-btn action-button btn btn_blue">Show more</button>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="banner-list__pagination">
+                    <ul class="pagination">
+                        <li class="pagination__item pagination__item_clear-white"></li>
+                        <li class="pagination__item pagination__item_clear-white pagination__item_clear-white_active"></li>
+                        <li class="pagination__item pagination__item_clear-white"></li>
+                    </ul>
+                </nav>
             </section>
         </header>
-        <main class="contentBlock">
+        <main class="content-block">
             <section class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!</section>
             <section>
                 <ul class="stikers">
-                    <li><img src="http://lorempixel.com/321/130/">
-                        <div class="stikerIcon cameraIcon"></div>
-                        <div class="stikerText">
-                            <h6 class="title">What We Are</h6>
-                            <p class="text">Lorem Ipsum is simply dummy text the printing and typesetting.</p>
+                    <li class="stikers__element"><img src="http://lorempixel.com/321/130/" class="stikers__element-image">
+                        <div class="stikerIcon cameraIcon stikers__element-icon stikers__element-icon_camera"></div>
+                        <div class="stikers__element-text-container">
+                            <h6 class="stikers__element-title">What We Are</h6>
+                            <p class="text stikers__element-text">Lorem Ipsum is simply dummy text the printing and typesetting.</p>
                         </div>
                     </li>
-                    <li><img src="http://lorempixel.com/322/130/">
-                        <div class="stikerIcon noteIcon"></div>
-                        <div class="stikerText">
-                            <h6 class="title">Start Our Project</h6>
-                            <p class="text">Lorem Ipsum is simply dummy text the printing and typesetting.</p>
+                    <li class="stikers__element"><img src="http://lorempixel.com/322/130/" class="stikers__element-image">
+                        <div class="stikerIcon noteIcon stikers__element-icon stikers__element-icon_note"></div>
+                        <div class="stikers__element-text-container">
+                            <h6 class="stikers__element-title">Start Our Project</h6>
+                            <p class="text stikers__element-text">Lorem Ipsum is simply dummy text the printing and typesetting.</p>
                         </div>
                     </li>
-                    <li><img src="http://lorempixel.com/323/130/">
-                        <div class="stikerIcon cartIcon"></div>
-                        <div class="stikerText">
-                            <h6 class="title">Our Team</h6>
-                            <p class="text">Lorem Ipsum is simply dummy text the printing and typesetting.</p>
+                    <li class="stikers__element"><img src="http://lorempixel.com/323/130/" class="stikers__element-image">
+                        <div class="stikerIcon cartIcon stikers__element-icon stikers__element-icon_cart"></div>
+                        <div class="stikerText stikers__element-text-container">
+                            <h6 class="title stikers__element-title">Our Team</h6>
+                            <p class="stikers__element-text text">Lorem Ipsum is simply dummy text the printing and typesetting.</p>
                         </div>
                     </li>
                 </ul>
             </section>
             <section>
                 <div class="hr">
-                    <div class="ico checkedIco"></div>
+                    <div class="hr__ico hr__ico_checked"></div>
                 </div>
-                <div class="sectionTitle">
+                <div class="main-title">
                      
                     Our <b>Features</b> 
                 </div>
-                <div class="featureCard"><img src="images/feature1.jpg" class="featureImage">
-                    <div class="featureDescription">
-                        <h6 class="title">Lorem ipsum is simply!</h6>
-                        <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,</p>
-                        <button class="actionButton whiteButton">Read more</button>
+                <div class="feature-card"><img src="images/feature1.jpg" class="feature-card__image">
+                    <div class="feature-card__description">
+                        <h6 class="feature-card__title">Lorem ipsum is simply!</h6>
+                        <p class="feature-card__text text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,</p>
+                        <button class="action-button btn btn_white feature-card__button">Read more</button>
                     </div>
                 </div>
                 <div class="hr"></div>
-                <div class="featureCard right"><img src="images/feature2.jpg" class="featureImage">
-                    <div class="featureDescription">
-                        <h6 class="title">Lorem ipsum is simply!</h6>
-                        <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,</p>
-                        <button class="actionButton whiteButton">Read more</button>
+                <div class="feature-card feature-card_right"><img src="images/feature2.jpg" class="feature-card__image feature-card_right__image">
+                    <div class="feature-card__description feature-card_right__description">
+                        <h6 class="feature-card__title">Lorem ipsum is simply!</h6>
+                        <p class="feature-card__text text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,</p>
+                        <button class="action-button btn btn_white feature-card__button">Read more</button>
                     </div>
                 </div>
             </section>
             <section>
                 <div class="hr">
-                    <div class="ico cupIco"></div>
+                    <div class="hr__ico hr__ico_cup"></div>
                 </div>
-                <div class="sectionTitle withSubTitle">Our Latest <b>Projects</b></div>
-                <div class="sectionSubTitle">Lorem Ipsum is simply dummy text the printing and typesetting.</div>
-                <div class="projectsList">
-                    <ul class="itemsList">
-                        <li>
-                            <div class="image"><img src="http://lorempixel.com/240/240"></div>
-                            <div class="projectName">Lorem Ipsum</div>
-                            <div class="projectProp">Photography</div>
+                <div class="main-title main-title_with-sub-text">Our Latest <b>Projects</b></div>
+                <div class="main-title__sub-text">Lorem Ipsum is simply dummy text the printing and typesetting.</div>
+                <div class="projects">
+                    <ul>
+                        <li class="projects__item">
+                            <div class="projects__item-image"><img src="http://lorempixel.com/240/240"></div>
+                            <div class="projects__item-name">Lorem Ipsum</div>
+                            <div class="projects__item-prop">Photography</div>
                         </li>
-                        <li>
-                            <div class="image"><img src="http://lorempixel.com/241/240"></div>
-                            <div class="projectName">Bonorum et Malorum</div>
-                            <div class="projectProp">Print Designing</div>
+                        <li class="projects__item">
+                            <div class="projects__item-image"><img src="http://lorempixel.com/241/240"></div>
+                            <div class="projects__item-name">Bonorum et Malorum</div>
+                            <div class="projects__item-prop">Print Designing</div>
                         </li>
-                        <li>
-                            <div class="image"><img src="http://lorempixel.com/242/240"></div>
-                            <div class="projectName">Bonorum et Malorum</div>
-                            <div class="projectProp">Print Designing</div>
+                        <li class="projects__item">
+                            <div class="projects__item-image"><img src="http://lorempixel.com/242/240"></div>
+                            <div class="projects__item-name">Bonorum et Malorum</div>
+                            <div class="projects__item-prop">Print Designing</div>
                         </li>
-                        <li>
-                            <div class="image"><img src="http://lorempixel.com/243/240"></div>
-                            <div class="projectName">Bonorum et Malorum</div>
-                            <div class="projectProp">Print Designing</div>
+                        <li class="projects__item">
+                            <div class="projects__item-image"><img src="http://lorempixel.com/243/240"></div>
+                            <div class="projects__item-name">Bonorum et Malorum</div>
+                            <div class="projects__item-prop">Print Designing</div>
                         </li>
                     </ul>
                 </div>
             </section>
             <section>
                 <div class="hr">
-                    <div class="ico bubbleIco"></div>
+                    <div class="hr__ico hr__ico_bubble"></div>
                 </div>
-                <div class="sectionTitle">
+                <div class="main-title">
                      
                     Client <b>Testimonials</b>
                 </div>
-                <div class="testimonialsList">
-                    <ul class="itemsList">
-                        <li>
-                            <p class="text">
-                                <Lorem>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!</Lorem>
-                            </p>
-                            <div class="autor"><b> Robart Markel </b>, Company Name</div>
+                <div class="testimonials">
+                    <ul>
+                        <li class="testimonials__item">
+                            <p class="testimonials__item-text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!</p>
+                            <div class="testimonials__item-autor"><b> Robart Markel </b>, Company Name</div>
                         </li>
                     </ul>
-                    <ul class="testiPages">
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="testiPages pagination testimonials__pagination">
+                        <li class="pagination__item testimonials__pagination-item testimonials__pagination-item_active"></li>
+                        <li class="pagination__item testimonials__pagination-item"></li>
+                        <li class="pagination__item testimonials__pagination-item"></li>
+                        <li class="pagination__item testimonials__pagination-item"></li>
+                        <li class="pagination__item testimonials__pagination-item"></li>
                     </ul>
                 </div>
             </section>
         </main>
         <footer>
-            <div class="topFooter">
-                <div class="contentBlock">
-                    <div class="footerItem">
-                        <div class="caption title"><img src="images/webworld.png"></div>
+            <div class="top-footer">
+                <div class="content-block">
+                    <div class="top-footer__item">
+                        <div class="top-footer__item-caption title"><img src="images/webworld.png"></div>
                         <div class="content">
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to.</p>
+                            <p class="top-footer__item-text text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to.</p>
                         </div>
                     </div>
-                    <div class="footerItem">
-                        <div class="caption title">Contact</div>
+                    <div class="top-footer__item">
+                        <div class="top-footer__item-caption title">Contact</div>
                         <div class="content">
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
+                            <p class="top-footer__item-text text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
                             <div class="address">New Delhi</div>
                             <div class="mail">info@example.com</div>
                             <div class="phone"> 890-08990890-23</div>
                         </div>
                     </div>
-                    <div class="footerItem">
-                        <div class="caption title">Latest Twits</div>
+                    <div class="top-footer__item">
+                        <div class="top-footer__item-caption title">Latest Twits</div>
                         <div class="content">
                             <ul class="footerTweets">
                                 <li class="tweet">
@@ -180,25 +176,25 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footerItem">
-                        <div class="caption title">News Letter</div>
+                    <div class="top-footer__item">
+                        <div class="top-footer__item-caption title">News Letter</div>
                         <div class="content">
-                            <p class="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
-                            <form class="subscribeNewsFrm">
-                                <input type="text" placeholder="Email Address">
-                                <button class="blueBtn">Go</button>
+                            <p class="top-footer__item-text text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+                            <form class="subscribe-form">
+                                <input type="text" placeholder="Email Address" class="subscribe-form__control subscribe-form__input">
+                                <button class="btn btn_blue subscribe-form__control subscribe-form__button">Go</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="bottomFooter">
-                <div class="contentBlock">
+                <div class="content-block">
                     <div class="copy">&copy; 2016 All rights reserved.</div>
                     <ul class="social">
-                        <li> <a class="twitter"></a></li>
-                        <li> <a class="fb"></a></li>
-                        <li> <a class="linked"></a></li>
+                        <li class="social__item"><a class="social__item-link social__item-link_twitter"></a></li>
+                        <li class="social__item"><a class="social__item-link social__item-link_fb"></a></li>
+                        <li class="social__item"><a class="social__item-link social__item-link_linked"></a></li>
                     </ul>
                 </div>
             </div>

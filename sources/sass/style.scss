@@ -1,18 +1,6 @@
 // vendors
 @import 'vendors/reset';
-
-// variables
-$contentWidth: 1024px;
-$lightColor: #fff;
-$lightGrey: #e1e1e1;
-$darkColor: #575757;
-$greyText : #c3c3c3;
-$darkText: #484848;
-$lightBlueColor: #71b6d5;
-$darkBlueColor: #273a43;
-$darkestBlueColor: #172227;
-
-$topBannerHeight: 95px;
+@import '_variables';
 
 * {
     box-sizing: border-box;
@@ -20,14 +8,14 @@ $topBannerHeight: 95px;
 
 html {
     font-size: 13.5px;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
+    font-family: $general-fonts; 
 }
 
 /*
 *   Layouts
 */
 
-.contentBlock {
+.content-block {
     width: $contentWidth;
     margin: 0 auto;
 }
@@ -39,108 +27,136 @@ main > section {
     }
 }
 
+// LAYOUT
+
 // header
-.headerTopBar {
+.main-header__top-bar {
     position: absolute;
     width: 100%;
     z-index: 5;
-
-    .contentBlock {
-        height: $topBannerHeight;
-        line-height: $topBannerHeight;
-        border-bottom: 1px solid #7c7c7c;
-    }
 }
 
-.headerTopBar .logo {
+.top-bar__content {
+    height: $topBannerHeight;
+    line-height: $topBannerHeight;
+    border-bottom: 1px solid #7c7c7c;
+}
+
+.top-bar__logo {
     float: left;
-    img{
-        vertical-align: middle;
-    }
 }
 
-.headerTopBar nav {
+.top-bar__logo-image {
+    vertical-align: middle;
+}
+// menu
+.top-bar__menu {
     float: right;
-    li {
-        display: inline-block;
-        margin-left: 35px;
-        margin-right: 5px;
-    }
 }
 
-.actionButton {
+// ELEMENTS
+
+// menu
+.menu__item {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 5px;
+}
+// buttons
+.btn {
+    cursor: pointer;
+    outline: none;
+}
+.action-button {
     border-radius: 5px;
     text-transform: uppercase;
     height: 3em;
     padding: 0 1em;
-    cursor: pointer;
-    outline: none;
 }
 
-.headerBanners {
-    position: relative; 
-    .bannerList, .bannerList li, .bannerContent {
-        width: 100%;
-    }    
-    ul {       
+.btn_white {
+    background-color: #fff;
+    border: 2px solid $lightBlueColor;
+    color: $lightBlueColor;
+    cursor: pointer;
+}
+.btn_blue{
+    background: $lightBlueColor;
+    border: none;
+    color: $lightColor;
+    cursor: pointer;
+}
+//  paginations
+.pagination {
+    display: inline-block;
+    overflow: hidden;
+    &__item {
+        float: left;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+.pagination__item_clear-white {
+    width: 7px;
+    height: 7px;
+    margin: 15px;
+    background: $lightColor;
+    border-radius: 50%;
+    &_active:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        top: -11px;
+        left: -11px;
+        border: 2px solid $lightColor;
+        border-radius: 50%;
+    }
+}
+
+//banner list
+.banner-list {
+    width: 100%;
+    &__list {
         overflow: hidden;
     }
-    li img {
-        min-width: 100%;
-    }
-    .bannerContent {
-        position: absolute;
-        top: $topBannerHeight;
-    }
-    .contentBlock {
-        position: relative;
-    }
-    .text {
+    &__element {
+        float: left;
         width: 100%;
+        position: relative;
         text-align: center;
-        .bannerTitle {
-            margin-top: 130px;
-            font-size: 3.5rem;
-        }
-        .bannerSubText{
-            font-size: 1.85rem;
-        }
     }
-
-    .actionButton {
+    &__text-title {
+        margin-top: 230px;
+        font-size: 3.5rem;
+    }
+    &__text-subtext {
+        font-size: 1.85rem;
+    }
+    &__text-btn {
         display: inline-block;
         margin-top: 90px;
         font-size: 1.25rem;
     }
-    .bannersPagination {
+    &__pagination {
         position: absolute;
         bottom: 50px;
         width: 100%;
         text-align: center;
-        li {
-            position: relative;
-            display: inline-block;
-            width: 7px;
-            height: 7px;
-            margin: 15px;
-            background: $lightColor;
-            border-radius: 50%;
-            cursor: pointer; 
-            &.active:after {
-                content: '';
-                position: absolute;
-                display: block;
-                width: 25px;
-                height: 25px;
-                top: -11px;
-                left: -11px;
-                border: 2px solid $lightColor;
-                border-radius: 50%;
-            }
-        }
     }
-
 }
+// header banner 
+
+.main-header__banners {
+    background: url(../images/banner1.jpg) no-repeat;
+    background-size: cover;
+    height: 41.48rem;
+    position: relative; 
+}
+
+
 
 .intro {
     padding: 85px 30px;
@@ -154,26 +170,15 @@ main > section {
 *   Themes
 */
 // general elements
-.blueBtn{
-    background: $lightBlueColor;
-    border: none;
-    color: $lightColor;
-    cursor: pointer;
-}
 
-.actionButton.whiteButton {
-    background-color: #fff;
-    border: 2px solid $lightBlueColor;
-    color: $lightBlueColor;
-    cursor: pointer;
-}
+
 
 .hr {
     position: relative;
     margin-top: 2.95rem;
     margin-bottom: 2.22rem;
     border-bottom: 1px solid $lightGrey;
-    .ico {
+    &__ico {
         position: absolute;
         top: - 2.95rem;
         left: calc(50% - 2.95rem);
@@ -185,6 +190,12 @@ main > section {
         background-color: #fff;
         background-position: center;
         background-repeat: no-repeat;
+
+        @each $ico in $hr-icons {
+            &_#{$ico} {
+                background-image: url('../images/#{$ico}.png');
+            }
+        }
     }
 }
 
@@ -201,21 +212,21 @@ h6.title {
     color: $darkText;
 }
 p.text {
-    line-height: 148%;
+    line-height: 150%;
 }
-.sectionTitle {
+.main-title {
     text-transform: uppercase;
     font-size: 1.9rem;
     text-align: center;
     margin-top: 2.96rem;
     margin-bottom: 3.7rem;
-    &.withSubTitle {
+    &_with-sub-text {
         margin-bottom: 1rem;
     }
-}
-.sectionSubTitle {
-    text-align: center;
-    margin-bottom: 3.7rem;
+    &__sub-text {
+        text-align: center;
+        margin-bottom: 3.7rem;
+    }
 }
 
 // local elements
@@ -223,119 +234,108 @@ main {
     color: $darkColor;
 }
 
-.mainHeader {
+.main-header {
     color: $lightColor;
 }
-.headerTopBar nav a {
+.main-header__top-bar nav a {
     color: $lightColor;
     font-size: 1.075rem;
     text-decoration: none;
 }
 
-.stikers li {
-    position: relative;
-    display: inline-block;
-    width: 320px;
-    border: 1px solid $lightGrey;
-    border-radius: 5px;
-    text-align: center;
-    margin-right: 2rem;
-    img{
-        width: 100%;
-        border-radius: 5px 5px 0 0;
-    }
-    .stikerText {
-        padding: 1.85rem 4.44rem;
-        .title {
+.stikers {
+    &__element {
+        position: relative;
+        display: inline-block;
+        width: 320px;
+        border: 1px solid $lightGrey;
+        border-radius: 5px;
+        text-align: center;
+        margin-right: 2rem;
+        &-image{
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+        &-text-container {
+            padding: 1.85rem 4.44rem;
+        }
+        &-title {
             margin-bottom: 15px;
         }
-    }
-    .stikerIcon {
-        position: absolute;
-        top: -3.5rem;
-        left: calc( 50% - 3.5rem);
-        width: 7rem;
-        height: 7rem;
-        background: $lightBlueColor;
-        background-repeat: no-repeat;
-        background-position: center;
-        border: 0.75rem solid #fff;
-        border-radius: 50%;
-    }
-    &:last-child{
-        margin-right: 0;
-    }
-    .cameraIcon{
-        background-image: url('../images/camera.png');
-    }
-    .noteIcon{
-        background-image: url('../images/note.png');
-    }
-    .cartIcon{
-        background-image: url('../images/cart.png');
+        &-icon {
+            position: absolute;
+            top: -3.5rem;
+            left: calc( 50% - 3.5rem);
+            width: 7rem;
+            height: 7rem;
+            background: $lightBlueColor;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 0.75rem solid #fff;
+            border-radius: 50%;
+
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @each $ico in $stiker-icons {
+            &-icon_#{$ico} {
+                background-image: url('../images/#{$ico}.png');
+            }
+        }
     }
 }
 
-.checkedIco {
-    background: url('../images/checked.png');
-}
-.cupIco {
-    background-image: url('../images/cup.png');
-}
-.bubbleIco {
-    background-image: url('../images/bubble.png');
-}
-
-.featureCard {
+.feature-card {
     margin-top: 3.7rem;
+    
     &::after {
         content: '';
         display: block;
         clear: both;
     }
     
-    .featureImage {
+    &__image {
         float: left;
     }
-    .featureDescription {
+    &__description {
         width: 65.43%;
         float: right;
-        .title {
-            margin : 1.11rem 0;
+    }
+    &__title {
+        margin : 1.11rem 0;
+    }
+    &__button {
+        margin-top: 1.5rem;
+    }
+    &_right{
+        &__image {
+            float: right;
         }
-        button {
-            margin-top: 1.5rem;
+        &__description {
+            float: left;
         }
-    }
-}
-.featureCard.right {
-    .featureImage {
-        float: right;
-    }
-    .featureDescription {
-        float: left;
-    }
+    }    
 }
 
-.projectsList {
+.projects {
     width: 100%;
     overflow: hidden;
-    li {
+    .projects__item {
         float: left;
         margin-right: 1.48rem;
         &:last-child {
             margin-right: 0;
         }
 
-        .image {
+        &-image {
             width: 17.78rem;
             border-radius: 5px;
             overflow: hidden;
             position: relative;
-
                 img {
                     height: 100%;
-                    
                     float: left;
                 }
                 &::after {
@@ -357,63 +357,65 @@ main {
                 &:hover::after {
                     opacity: 1;
                 }
-          }
-        .projectName {
+        }
+        &-name {
             font-size: 1.333rem;
             text-align: center;
             margin-top: 1.48rem;
         }
-        .projectProp {
+        &-prop {
             text-align: center;
             line-height: 200%;
         }
     }
 }
 
-.testimonialsList {
+.testimonials {
     font-size: 1.333rem;
     padding: 0 1rem;
     text-align: center;
-    li {
+    overflow: hidden;
+    &__item {
         width: 100%;
+        float: left;
+        &-text {
+            margin-bottom: 2.22rem;
+        }
+        &-autor {
+            display: inline-block;
+            padding: 2.22rem 0;
+            margin: 0 auto;
+            background: url('../images/commentline.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
     }
-    .text {
-        margin-bottom: 2.22rem;
-    }
-    .autor {
-        display: inline-block;
-        padding: 2.22rem 0;
-        margin: 0 auto;
-        background: url('../images/commentline.png');
-        background-repeat: no-repeat;
-        background-position: top center;
-    }
-    .testiPages {
+    
+    &__pagination {
         display: inline-block;
         overflow: hidden;
-        li {
-            float: left;
+        &-item {
             margin-right: 0.9rem;
             width: 0.9rem;
             height: 0.9rem;
             background: $lightGrey;
             border-radius: 50%;
-            cursor: pointer;
-            &.active {
+            &_active {
                 background-color: $lightBlueColor;
             } 
         }
     } 
 }
 
-.topFooter {
+.top-footer {
     min-height: 350px;
     background: $darkBlueColor;
     padding: 4.44rem 0;
     &:after {
         clear: both;
     }
-    .footerItem {
+
+    &__item {
         float: left;
         width: 210px;
         margin-right: 4.44rem;
@@ -421,14 +423,14 @@ main {
             margin-right: 0;
         }
 
-        .caption {
+        &-caption {
             margin-bottom: 2.22rem;
             text-transform: uppercase;
             font-size: 1.48rem;
             line-height: 200%;
             color: $lightColor;
         }
-        p.text {
+        &-text {
             color: $greyText;
             margin-bottom: 0.9rem;
         }
@@ -439,15 +441,13 @@ main {
             background-position: left center;
             background-repeat: no-repeat;
         }
-        .address {
-            background-image: url('../images/address.png');
+
+         @each $ico in $contacts-icons {
+            .#{$ico} {
+                background-image: url('../images/#{$ico}.png');
+            }
         }
-        .mail {
-            background-image: url('../images/mail.png');
-        }
-        .phone {
-            background-image: url('../images/phone.png');
-        }
+
         .tweet {
             background-image: url('../images/tweet.png');
             background-position: left 10%;
@@ -459,30 +459,33 @@ main {
         .text.time {
             color: $lightBlueColor;
         }
-        .subscribeNewsFrm{
-            display: block;
-            input, button {
-                height: 3rem;
-                margin: 0;
-                float: left;
-                border: none;
-                outline: none;
-            }
-            input {
-                width: 80%;
-                color: $lightColor;
-                background: $darkestBlueColor;
-                padding: 0 1rem;
-                border-radius: 5px 0 0 5px;
-            }
-            button {
-                width: 20%;
-                margin: 0;
-                border-radius: 0 5px 5px 0;
-            }
-        }
     }
 }
+
+
+ .subscribe-form{
+    display: block;
+    &__control {
+        height: 3rem;
+        margin: 0;
+        float: left;
+        border: none;
+        outline: none;
+    }
+    &__input {
+        width: 80%;
+        color: $lightColor;
+        background: $darkestBlueColor;
+        padding: 0 1rem;
+        border-radius: 5px 0 0 5px;
+    }
+    &__button {
+        width: 20%;
+        margin: 0;
+        border-radius: 0 5px 5px 0;
+    }
+}
+
 .bottomFooter {
     background: $darkestBlueColor;
     color: $lightColor;
@@ -496,36 +499,36 @@ main {
         display: inline-block;
         color: $greyText;
     }
-    .social {
-        float: right;
-        li {
-            float: left;
-            margin-left: 0.9rem;
-            a {
-                position: relative;
-                top: 0.5rem;
-                display: inline-block;
-                width: 2.22rem;
-                height: 2.22rem;
-                background: #fff;
-                border-radius: 50%;
-                &.fb, &.linked, &.twitter {
-                    background-position: center;
-                    background-repeat: no-repeat;
-                }
-                &.twitter {
-                    background-color: #71b6d5;
-                    background-image: url('../images/tweetterwhite.png');
-                }
+}
 
-                &.fb, &.linked {
-                    background-color: #2c3b42;
-                }
-                &.fb {
-                    background-image: url('../images/fbwhite.png');
-                }
-                &.linked {
-                    background-image: url('../images/inwhite.png');
+.social {
+    float: right;
+    &__item {
+        float: left;
+        margin-left: 0.9rem;
+        &-link {
+            position: relative;
+            top: 0.5rem;
+            display: inline-block;
+            width: 2.22rem;
+            height: 2.22rem;
+            background: #fff;
+            border-radius: 50%;
+            &_fb, &_linked, &_twitter {
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &_twitter {
+                background-color: #71b6d5;
+            }
+
+            &_fb, &_linked {
+                background-color: #2c3b42;
+            }
+
+            @each $ico in $social-white-icons {
+                &_#{$ico} {
+                    background-image: url('../images/#{$ico}white.png');
                 }
             }
         }

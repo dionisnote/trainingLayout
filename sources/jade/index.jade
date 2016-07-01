@@ -4,137 +4,135 @@ html
         title Тестовая страница
         meta(charset="utf-8")
     body
-        header.mainHeader
-            section.headerTopBar
-                div.contentBlock
-                    a.logo(href="#")
-                        img(src="images/webworld.png")
-                    nav
+        header.main-header
+            section.main-header__top-bar.top-bar
+                div.content-block.top-bar__content
+                    a.top-bar__logo(href="#")
+                        img.top-bar__logo-image(src="images/webworld.png")
+                    nav.menu.top-bar__menu
                         ul
-                            li 
+                            li.menu__item 
                                 a(href="#") Home
-                            li
+                            li.menu__item
                                 a(href="#") Portfolio
-                            li
+                            li.menu__item
                                 a(href="#") Contact
-            section.headerBanners
-                ul.bannerList
-                    li
-                        img(src="images/banner1.jpg").bannerImage
-                        div.bannerContent
-                            div.contentBlock
-                                div.text
-                                    div.bannerTitle Clean, flat &amp; polished design
-                                    div.bannerSubText Proin facilisis aliquam nunc quis varius.
-                                    button.actionButton.blueBtn Show more
-                ul.bannersPagination
-                    li
-                    li.active
-                    li
-        main.contentBlock
+            section.main-header__banners.banner_list
+                div.banner_list__content.content-block
+                    ul.banner-list__list
+                        li.banner-list__element
+                            div.banner-list__text-title Clean, flat &amp; polished design
+                            div.banner-list__text-subtext Proin facilisis aliquam nunc quis varius.
+                            button.banner-list__text-btn.action-button.btn.btn_blue Show more
+                nav.banner-list__pagination
+                    ul.pagination
+                        li.pagination__item.pagination__item_clear-white
+                        li.pagination__item.pagination__item_clear-white.pagination__item_clear-white_active
+                        li.pagination__item.pagination__item_clear-white
+        main.content-block
             section.intro Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!
             section
                 ul.stikers
-                    li
-                        img(src="http://lorempixel.com/321/130/")
-                        div.stikerIcon.cameraIcon
-                        div.stikerText
-                            h6.title What We Are
-                            p.text Lorem Ipsum is simply dummy text the printing and typesetting.
-                    li
-                        img(src="http://lorempixel.com/322/130/")
-                        div.stikerIcon.noteIcon
-                        div.stikerText
-                            h6.title Start Our Project
-                            p.text Lorem Ipsum is simply dummy text the printing and typesetting.
-                    li
-                        img(src="http://lorempixel.com/323/130/")
-                        div.stikerIcon.cartIcon
-                        div.stikerText
-                            h6.title Our Team
-                            p.text Lorem Ipsum is simply dummy text the printing and typesetting.
+                    li.stikers__element
+                        img(src="http://lorempixel.com/321/130/").stikers__element-image
+                        div.stikerIcon.cameraIcon.stikers__element-icon.stikers__element-icon_camera
+                        div.stikers__element-text-container
+                            h6.stikers__element-title What We Are
+                            p.text.stikers__element-text Lorem Ipsum is simply dummy text the printing and typesetting.
+                    li.stikers__element
+                        img(src="http://lorempixel.com/322/130/").stikers__element-image
+                        div.stikerIcon.noteIcon.stikers__element-icon.stikers__element-icon_note
+                        div.stikers__element-text-container
+                            h6.stikers__element-title Start Our Project
+                            p.text.stikers__element-text Lorem Ipsum is simply dummy text the printing and typesetting.
+                    li.stikers__element
+                        img(src="http://lorempixel.com/323/130/").stikers__element-image
+                        div.stikerIcon.cartIcon.stikers__element-icon.stikers__element-icon_cart
+                        div.stikerText.stikers__element-text-container
+                            h6.title.stikers__element-title Our Team
+                            p.stikers__element-text.text Lorem Ipsum is simply dummy text the printing and typesetting.
             section
                 div.hr
-                    div.ico.checkedIco
-                div.sectionTitle 
+                    div.hr__ico.hr__ico_checked
+                div.main-title 
                     | Our <b>Features</b> 
-                div.featureCard
-                    img(src="images/feature1.jpg").featureImage
-                    div.featureDescription
-                        h6.title Lorem ipsum is simply!
-                        p.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
-                        button.actionButton.whiteButton Read more
+                div.feature-card
+                    img(src="images/feature1.jpg").feature-card__image
+                    div.feature-card__description
+                        h6.feature-card__title Lorem ipsum is simply!
+                        p.feature-card__text.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
+                        button.action-button.btn.btn_white.feature-card__button Read more
                 div.hr
-                div.featureCard.right
-                    img(src="images/feature2.jpg").featureImage
-                    div.featureDescription
-                        h6.title Lorem ipsum is simply!
-                        p.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
-                        button.actionButton.whiteButton Read more
+                div.feature-card.feature-card_right
+                    img(src="images/feature2.jpg").feature-card__image.feature-card_right__image
+                    div.feature-card__description.feature-card_right__description
+                        h6.feature-card__title Lorem ipsum is simply!
+                        p.feature-card__text.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators. on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
+                        button.action-button.btn.btn_white.feature-card__button Read more
             section
                 div.hr
-                    div.ico.cupIco
-                div.sectionTitle.withSubTitle
+                    div.hr__ico.hr__ico_cup
+                div.main-title.main-title_with-sub-text
                     | Our Latest <b>Projects</b>
-                div.sectionSubTitle Lorem Ipsum is simply dummy text the printing and typesetting.
-                div.projectsList
-                    ul.itemsList
-                        li
-                            div.image
+                div.main-title__sub-text Lorem Ipsum is simply dummy text the printing and typesetting.
+                div.projects
+                    ul
+                        li.projects__item
+                            div.projects__item-image
                                 img(src="http://lorempixel.com/240/240")
-                            div.projectName Lorem Ipsum
-                            div.projectProp Photography
-                        li
-                            div.image
+                            div.projects__item-name Lorem Ipsum
+                            div.projects__item-prop Photography
+                        li.projects__item
+                            div.projects__item-image
                                 img(src="http://lorempixel.com/241/240")
-                            div.projectName Bonorum et Malorum
-                            div.projectProp Print Designing
-                        li
-                            div.image
+                            div.projects__item-name Bonorum et Malorum
+                            div.projects__item-prop Print Designing
+                        li.projects__item
+                            div.projects__item-image
                                 img(src="http://lorempixel.com/242/240")
-                            div.projectName Bonorum et Malorum
-                            div.projectProp Print Designing
-                        li
-                            div.image
+                            div.projects__item-name Bonorum et Malorum
+                            div.projects__item-prop Print Designing
+                        li.projects__item
+                            div.projects__item-image
                                 img(src="http://lorempixel.com/243/240")
-                            div.projectName Bonorum et Malorum
-                            div.projectProp Print Designing
+                            div.projects__item-name Bonorum et Malorum
+                            div.projects__item-prop Print Designing
             section
                 div.hr
-                    div.ico.bubbleIco
-                div.sectionTitle 
+                    div.hr__ico.hr__ico_bubble
+                div.main-title 
                     | Client <b>Testimonials</b>
-                div.testimonialsList
-                    ul.itemsList
-                        li
-                            p.text
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!
-                            div.autor
+                div.testimonials
+                    ul
+                        li.testimonials__item
+                            p.testimonials__item-text.text
+                                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since type specimen book !!
+                            div.testimonials__item-autor
                                 | <b> Robart Markel </b>, Company Name
-                    ul.testiPages
-                        li.active
-                        li
-                        li
-                        li
-                        li
+                    ul.testiPages.pagination.testimonials__pagination
+                        li.pagination__item.testimonials__pagination-item.testimonials__pagination-item_active
+                        li.pagination__item.testimonials__pagination-item
+                        li.pagination__item.testimonials__pagination-item
+                        li.pagination__item.testimonials__pagination-item
+                        li.pagination__item.testimonials__pagination-item
 
         footer
-            div.topFooter
-                div.contentBlock
-                    div.footerItem
-                        div.caption.title
+            div.top-footer
+                div.content-block
+                    div.top-footer__item
+                        div.top-footer__item-caption.title
                             img(src="images/webworld.png")
                         div.content
-                            p.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to.
-                    div.footerItem
-                        div.caption.title Contact
+                            p.top-footer__item-text.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to.
+                    div.top-footer__item
+                        div.top-footer__item-caption.title Contact
                         div.content
-                            p.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                            p.top-footer__item-text.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
                             div.address New Delhi
                             div.mail info@example.com
                             div.phone  890-08990890-23
-                    div.footerItem
-                        div.caption.title Latest Twits
+                    div.top-footer__item
+                        div.top-footer__item-caption.title Latest Twits
                         div.content
                             ul.footerTweets
                                 li.tweet
@@ -143,22 +141,22 @@ html
                                 li.tweet
                                     p.text There are many variations of passages of Lorem Ipsum available, but the
                                     p.text.time 1 hour ago
-                    div.footerItem
-                        div.caption.title News Letter
+                    div.top-footer__item
+                        div.top-footer__item-caption.title News Letter
                         div.content
-                            p.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                            form.subscribeNewsFrm
-                                input(type="text" placeholder="Email Address")
-                                button.blueBtn Go
+                            p.top-footer__item-text.text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                            form.subscribe-form
+                                input(type="text" placeholder="Email Address").subscribe-form__control.subscribe-form__input
+                                button.btn.btn_blue.subscribe-form__control.subscribe-form__button Go
             div.bottomFooter
-                div.contentBlock
+                div.content-block
                     div.copy &copy; 2016 All rights reserved.
                     ul.social
-                        li 
-                            a.twitter
-                        li 
-                            a.fb
-                        li 
-                            a.linked
+                        li.social__item
+                            a.social__item-link.social__item-link_twitter
+                        li.social__item
+                            a.social__item-link.social__item-link_fb
+                        li.social__item
+                            a.social__item-link.social__item-link_linked
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css')
         link(rel="stylesheet" href="css/style.css")
