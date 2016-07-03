@@ -16,7 +16,7 @@ html {
 */
 
 .content-block {
-    width: $contentWidth;
+    max-width: $contentWidth;
     margin: 0 auto;
 }
 
